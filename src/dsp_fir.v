@@ -24,9 +24,14 @@ module dsp_fir (
     assign clk_adc = (phase == M1 || phase == M2 || phase == M3 || phase == M4) ? 1'b1 : 1'b0;
     assign clk_dac = ~clk_adc;
 
+    // Registers for filter coefficients and data pipeline
     reg signed [7:0]  fir_coeff [0:7];
     reg signed [7:0]  data_pipe [0:7];
+
+    // Mux output that connects to multiplier
     reg signed [7:0] mux_d, mux_c;
+    
+    // Accumulator
     reg signed [18:0] acc; 
     reg [7:0] result_reg; 
     
