@@ -33,6 +33,8 @@ The design will generate clock signals to external ADC and DAC ICs. The ADC08100
 
 A PCB containing all the supporting ICs will be designed. The PCB will be published on the [dsp_fir_pcb](https://github.com/seapanda0/dsp_fir_pcb) repository.
 
+This project has been verified with FPGA testing.
+
 ## External hardware
 
 ADC08100 Datasheet:
